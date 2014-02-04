@@ -1,0 +1,33 @@
+<div align="center"><h1>New Task</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Category</th>
+      <th>Due</th>
+      <th>Done?</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.Task %></td>
+        <td><%= task.Category %></td>
+        <td><%= task.Due %></td>
+        <td><%= task.is_completed %></td>
+        <td><%= link_to 'Show', task %></td>
+        <td><%= link_to 'Edit', edit_task_path(task) %></td>
+        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Task', new_task_path %><div align="center"><footer><p>De Leon - Sy 2014</p></footer>

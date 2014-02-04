@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Task: MyString
+  Category: MyString
+  Due: 2014-02-04
+  is_completed: false
+
+two:
+  Task: MyString
+  Category: MyString
+  Due: 2014-02-04
+  is_completed: false
